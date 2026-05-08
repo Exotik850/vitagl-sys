@@ -1,6 +1,6 @@
 [package]
 name = "vitagl-sys"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 description = "Low-level bindings for the vitaGL library"
 license = "MIT"
