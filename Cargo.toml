@@ -1,0 +1,19 @@
+[package]
+name = "vitagl-sys"
+version = "0.1.0"
+edition = "2021"
+description = "Low-level bindings for the vitaGL library"
+
+[dependencies]
+
+[package.metadata.vita]
+# this is a placeholder, and will be updated with the actual
+# title ID of the downstream crate that depends on this one
+title_id = "VITAGL000" 
+
+[build-dependencies] 
+bindgen = "0.72"
+
+[[example]]
+name = "cube"
+path = "./examples/cube.rs"
