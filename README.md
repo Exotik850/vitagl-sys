@@ -51,6 +51,12 @@ If you have `cargo-vita` installed, you can build the example VPK:
 cargo vita build vpk -- --release --example cube
 ```
 
+For documentation, you can generate it locally: 
+
+```bash
+cargo doc --open --target armv7-sony-vita-newlibeabihf
+```
+
 ## License
 
 MIT. See [LICENSE](LICENSE).
