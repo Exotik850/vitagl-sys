@@ -63,4 +63,4 @@ MIT. See [LICENSE](LICENSE).
 
 ## Support
 
-Open an issue on GitHub for questions or bug reports: https://github.com/Exotik850/vitagl-sys/issues
+Open an issue on GitHub for questions or bug reports: <https://github.com/Exotik850/vitagl-sys/issues>
