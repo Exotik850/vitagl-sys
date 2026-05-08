@@ -4,6 +4,8 @@
 #![allow(nonstandard_style)]
 #![doc = include_str!("../README.md")]
 
+#![cfg_attr(not(target_os = "vita"), doc = "\n\n# This crate provides bindings to the PlayStation Vita's native APIs. It is only intended to be used on the Vita platform, and will not work on other platforms.")]
+
 #[cfg(target_os = "vita")]
 include!(concat!(env!("OUT_DIR"), "/bindings.rs"));
 
