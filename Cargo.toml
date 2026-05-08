@@ -3,6 +3,8 @@ name = "vitagl-sys"
 version = "0.1.0"
 edition = "2021"
 description = "Low-level bindings for the vitaGL library"
+license = "MIT"
+repository = "https://github.com/Exotik850/vitagl-sys"
 
 [dependencies]
 
