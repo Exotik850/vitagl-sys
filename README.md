@@ -1,6 +1,6 @@
 # vitagl-sys
 
-Low-level Rust bindings for the vitaGL library on PlayStation Vita.
+Low-level Rust bindings for the [vitaGL](https://github.com/Rinnegatamante/vitaGL) library on PlayStation Vita.
 
 [![Version](https://img.shields.io/badge/version-0.1.0-blue.svg)](https://github.com/Exotik850/vitagl-sys)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
