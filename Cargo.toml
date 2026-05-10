@@ -19,3 +19,6 @@ bindgen = "0.72"
 [[example]]
 name = "cube"
 path = "./examples/cube.rs"
+
+[dev-dependencies]
+vita-dbgscreen = "0.1.2"

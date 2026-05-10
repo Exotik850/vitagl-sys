@@ -215,11 +215,27 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "e6e4313cd5fcd3dad5cafa179702e2b244f760991f45397d14d4ebf38247da75"
 
 [[package]]
+name = "vita-dbgscreen"
+version = "0.1.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "ee0fbc89eacf606cd8c62c371c9487404b99dbdc9eccb4d80f786bcccb602575"
+dependencies = [
+ "vitasdk-sys",
+]
+
+[[package]]
 name = "vitagl-sys"
 version = "0.1.2"
 dependencies = [
  "bindgen",
+ "vita-dbgscreen",
 ]
+
+[[package]]
+name = "vitasdk-sys"
+version = "0.3.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "665d8a491ad572e0ebc103846c4a51e66b641c942391b7241f91c413a3a301a9"
 
 [[package]]
 name = "windows-link"
