@@ -7,24 +7,25 @@ fn main() {
         return;
     };
     let lib_dir = sdk.join("arm-vita-eabi").join("lib");
-    
-    let vitagl_header = sdk.join("arm-vita-eabi/include/vitaGL.h");
-    
-    let bindings = bindgen::Builder::default()
-    .header(vitagl_header.to_string_lossy())
-    .parse_callbacks(Box::new(bindgen::CargoCallbacks::new()))
-    .clang_arg("--target=arm-vita-eabi")
-    .clang_arg(format!("--sysroot={}", sdk.to_string_lossy()))
-    .clang_arg("-I")
-    .clang_arg(sdk.join("arm-vita-eabi/include").to_string_lossy())
-    .generate()
-        .expect("Unable to generate bindings");
-    
-    let out_path = PathBuf::from(env::var("OUT_DIR").unwrap());
-    bindings
-    .write_to_file(out_path.join("bindings.rs"))
-    .expect("Couldn't write bindings!");
-    
+
+    #[cfg(feature = "bindgen")]
+    {
+        let vitagl_header = sdk.join("arm-vita-eabi/include/vitaGL.h");
+        let bindings = bindgen::Builder::default()
+            .header(vitagl_header.to_string_lossy())
+            .parse_callbacks(Box::new(bindgen::CargoCallbacks::new()))
+            .clang_arg("--target=arm-vita-eabi")
+            .clang_arg(format!("--sysroot={}", sdk.to_string_lossy()))
+            .clang_arg("-I")
+            .clang_arg(sdk.join("arm-vita-eabi/include").to_string_lossy())
+            .generate()
+            .expect("Unable to generate bindings");
+        let out_path = PathBuf::from(env::var("OUT_DIR").unwrap());
+        bindings
+            .write_to_file(out_path.join("bindings.rs"))
+            .expect("Couldn't write bindings!");
+    }
+
     // Do not link libraries for docs.rs
     if std::env::var("DOCS_RS").is_ok() {
         return;

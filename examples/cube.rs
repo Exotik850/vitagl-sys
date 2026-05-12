@@ -85,7 +85,7 @@ cfg_select! {
                     vglSwapBuffers(GL_FALSE as u8);
                 }
 
-                glEnd();
+                // glEnd();
             }
         }
     },

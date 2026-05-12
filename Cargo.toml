@@ -8,13 +8,16 @@ repository = "https://github.com/Exotik850/vitagl-sys"
 
 [dependencies]
 
+[features]
+bindgen = ["dep:bindgen"]
+
 [package.metadata.vita]
 # this is a placeholder, and will be updated with the actual
 # title ID of the downstream crate that depends on this one
-title_id = "VITAGL000" 
+title_id = "VITAGL000"
 
-[build-dependencies] 
-bindgen = "0.72"
+[build-dependencies]
+bindgen = { version = "0.72", optional = true }
 
 [[example]]
 name = "cube"
