@@ -3,6 +3,7 @@ cfg_select! {
         use std::ffi::c_void;
         use vitagl_sys::*;
         fn run() {
+            vita_dbgscreen::set_dbg_screen_panic_handler();
             let colors: [f32; 12] = [1.0, 1.0, 1.0, 1.0, 0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0]; // Colors for a face
             let vertices_front: [f32; 12] = [
                 -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5,
